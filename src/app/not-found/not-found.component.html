@@ -1,0 +1,17 @@
+<div class="info">
+  Вы попали на несуществующую странцу
+  <a routerLink="" class="menu">Вернуться на главную страницу</a>
+</div>
+<button type="button" class="btn btn-warning" (click)="changeTheme()">
+  Warning
+</button>
+<div [ngSwitch]="type">
+  <ng-template ngSwitchCase="10">Message: {{ type }} = десять</ng-template>
+  <ng-template ngSwitchCase="11">Message: {{ type }} = одиннадцать</ng-template>
+  <ng-template ngSwitchCase="12">Message: {{ type }} = двенадцать</ng-template>
+  <ng-template ngSwitchCase="13">Message: {{ type }} = 13</ng-template>
+  <ng-template ngSwitchCase="14">Message: {{ type }} = 14</ng-template>
+  <ng-template ngSwitchCase="15">Message: {{ type }} = 15</ng-template>
+  <ng-template ngSwitchCase="16">Message: {{ type }} = 16</ng-template>
+  <ng-template ngSwitchDefault>Standart Message </ng-template>
+</div>

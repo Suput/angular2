@@ -1,0 +1,27 @@
+<div *ngFor="let partner of partners">
+  <div class="card" style="width: 18rem">
+    <img [src]="partner.imageUrl" class="card-img-top" alt="логотип партнера" />
+    <div class="card-body">
+      <h5 class="card-title">Название компании: {{ partner.name }}</h5>
+      <div class="card-text">
+        <div>Года партнерства: {{ partner.year }}</div>
+        <div>Адрес: {{ partner.address }}</div>
+        <div>
+          <i>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+            quam sed distinctio facilis accusantium autem suscipit, esse
+            consequuntur harum quod fuga necessitatibus dicta nostrum velit
+            incidunt ipsam obcaecati optio quia. Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Pariatur quam sed distinctio facilis
+            accusantium autem suscipit, esse consequuntur harum quod fuga
+            necessitatibus dicta nostrum velit incidunt ipsam obcaecati optio
+            quia.
+          </i>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer" *ngIf="partner.rating">
+      Рейтинг: {{ partner.rating }}
+    </div>
+  </div>
+</div>

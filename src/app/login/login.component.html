@@ -1,0 +1,117 @@
+<div *ngIf="isLogin; then login; else register"></div>
+<ng-template #login>
+  <div class="form-signin">
+    <h1 class="h3 mb-3 fw-normal">Вход</h1>
+    <div [class]="errorType" role="alert" *ngIf="isError">
+      {{ error }}
+    </div>
+    <div class="form-floating">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+        min="30"
+        max="50"
+        [(ngModel)]="user.email"
+      />
+      <label for="floatingInput">Почта</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        min="8"
+        max="20"
+        [(ngModel)]="user.password"
+      />
+      <label for="floatingPassword">Пароль</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me" /> Запомнить меня
+      </label>
+    </div>
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      (click)="makeLogin()"
+    >
+      Войти
+    </button>
+
+    <button
+      style="margin-top: 50px"
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      (click)="isLogin = false"
+    >
+      Нет аккаунта
+    </button>
+  </div>
+</ng-template>
+<ng-template #register>
+  <div class="form-signin">
+    <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+
+    <div [class]="errorType" role="alert" *ngIf="isError">
+      {{ error }}
+    </div>
+    <div class="form-floating">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+        min="30"
+        max="50"
+        [(ngModel)]="user.email"
+      />
+      <label for="floatingInput">Почта</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        min="8"
+        max="20"
+        [(ngModel)]="user.password"
+      />
+      <label for="floatingPassword">Пароль</label>
+    </div>
+
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        min="8"
+        max="20"
+        [(ngModel)]="user.passwordrepeat"
+      />
+      <label for="floatingPassword">Повторить пароль</label>
+    </div>
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      (click)="registerUser()"
+    >
+      Зарегистрироваться
+    </button>
+
+    <button
+      style="margin-top: 50px"
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      (click)="isLogin = true"
+    >
+      Уже есть аккаунт
+    </button>
+  </div>
+</ng-template>

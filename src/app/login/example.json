@@ -1,0 +1,30 @@
+{
+  "firstname": "Иван",
+  "surname": "Иванов",
+  "patronymic": "Иванович",
+  "age": 24,
+  "isMale": true,
+  "siblings": [
+    {
+      "firstname": "Иван",
+      "surname": "Иванов",
+      "patronymic": "Иванович",
+      "age": 24,
+      "isMale": true
+    },
+    {
+      "firstname": "Маша",
+      "surname": "Иванов",
+      "patronymic": "Иванович",
+      "age": 25,
+      "isMale": false
+    },
+    {
+      "firstname": "Ивана",
+      "surname": "Иванов",
+      "patronymic": "Иванович",
+      "age": 20,
+      "isMale": false
+    }
+  ]
+}

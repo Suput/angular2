@@ -1,0 +1,27 @@
+<div class="background">
+  <div *ngIf="!isNight">Добрый день!</div>
+  <div *ngIf="isNight">Добрый вечер!</div>
+  <div style="margin: 15px">
+    <div *ngIf="isNight; then lightBlock; else darkBlock"></div>
+    <ng-template #lightBlock>
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        (click)="changeNight()"
+      >
+        Поменять на день
+      </button>
+      <div class="alert alert-light" role="alert">Сейчас вечер</div>
+    </ng-template>
+    <ng-template #darkBlock>
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="changeNight()"
+      >
+        Поменять на ночь
+      </button>
+      <div class="alert alert-dark" role="alert">Сейчас день</div>
+    </ng-template>
+  </div>
+</div>
