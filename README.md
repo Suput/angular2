@@ -1,3 +1,1 @@
-##Why fork
-
-Because used this as a template
+Forked, because used this as a template
