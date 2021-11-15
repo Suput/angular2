@@ -24,10 +24,10 @@
         routerLink="about"
         routerLinkActive="link-active"
         [routerLinkActiveOptions]="{ exact: true }"
-        >О нас</a
+        >Посты</a
       >
     </li>
-    <li class="nav-item">
+    <!--<li class="nav-item">
       <a
         class="nav-link"
         routerLink="fasdfasdfasd"
@@ -35,7 +35,7 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >Не существующий путь</a
       >
-    </li>
+    </li>-->
     <li class="nav-item" *ngIf="isUserLogin">
       <button type="button" class="btn btn-link" (click)="exit()">Выйти из аккаунта {{username}}</button>
     </li>
