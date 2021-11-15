@@ -62,22 +62,55 @@
     </div>
     <div class="form-floating">
       <input
+        type="text"
+        class="form-control"
+        id="floatingInput1"
+        placeholder="Имя"
+        max="20"
+        [(ngModel)]="user.name"
+      />
+      <label for="floatingInput1">Имя</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="text"
+        class="form-control"
+        id="floatingInput2"
+        placeholder="Фамилия"
+        max="20"
+        [(ngModel)]="user.lastname"
+      />
+      <label for="floatingInput2">Фамилия</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="text"
+        class="form-control"
+        id="floatingInput3"
+        placeholder="Отчество"
+        max="20"
+        [(ngModel)]="user.pluslastname"
+      />
+      <label for="floatingInput3">Отчество</label>
+    </div>
+    <div class="form-floating">
+      <input
         type="email"
         class="form-control"
-        id="floatingInput"
+        id="floatingInput4"
         placeholder="name@example.com"
         min="30"
         max="50"
         [(ngModel)]="user.email"
       />
-      <label for="floatingInput">Почта</label>
+      <label for="floatingInput4">Почта</label>
     </div>
     <div class="form-floating">
       <input
         type="password"
         class="form-control"
         id="floatingPassword"
-        placeholder="Password"
+        placeholder="Пароль"
         min="8"
         max="20"
         [(ngModel)]="user.password"
